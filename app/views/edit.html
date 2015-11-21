@@ -1,0 +1,55 @@
+
+  <div >
+
+  <form class="form-horizontal">
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Nombre</label>
+        <div class="col-sm-10">
+          <input class="col-md-3" type="text" ng-model="newx.name" /><br/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Descripción</label>
+        <div class="col-sm-10">
+          <textarea class="col-md-3" ng-model="newx.description" ></textarea><br/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Lugar</label>
+        <div class="col-sm-10">
+          <input class="col-md-3" type="text" ng-model="newx.place" /><br/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Fecha Límite</label>
+        <div class="col-sm-10">
+          <input class="col-md-3" type="text" ng-model="newx.deadline" /><br/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Notificación</label>
+        <div class="col-sm-10">
+          <input class="col-md-3" type="text" ng-model="newx.notification" /><br/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label  class="col-sm-2 control-label">Evento</label>
+        <div class="col-sm-10">
+          <input class="col-md-3" type="text" ng-model="newx.event" /><br/>
+        </div>
+      </div>
+
+    </form>
+
+
+
+  </div>
+
+
+  <hr/>
+  <div>
+
+  <button class="col-md-3 btn btn-danger" ng-click="volver()">Volver</button>
+  <button class="col-md-3 btn btn-success" ng-click="modificar()" style="margin: 0 20px;">modificar</button>
+
+</div>

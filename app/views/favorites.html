@@ -1,0 +1,59 @@
+<hr/>
+<div class="col-md-12">
+  <div class="col-sm-3">
+    <h2>{{user.user}}</h2>
+  </div>
+</div>
+    <hr/>
+
+
+  <div class="col-md-6">
+    <div id="mapContainer" style="width: 100%;height:300px;" gmap="" data="data"></div>
+</div>
+
+<div class="col-md-6">
+
+<form class="form-horizontal col-md-12">
+    <div class="form-group">
+      <div class="col-sm-3">
+      <button ng-click="all()"  class="col-md-10 btn btn-primary">Todas las<br/>Conferencias</button>
+      </div>
+      <button ng-click="new()" class="col-sm-2 btn btn-success" >Agregar <br/>Conferencia</button>
+    </div>
+
+</form>
+
+
+ <div class="table-responsive col-md-12">
+          <table class="table table-striped table-hover table-condensed">
+              <thead>
+                  <tr>
+                      <th>Favoritos</th>
+                  </tr>
+              </thead>
+          </table>
+          <div class="bodycontainer scrollable">
+          <table class="table table-hover table-striped table-condensed table-scrollable"
+          style="overflow-y: auto;">
+              <tbody style="max-height: 450px;">
+              <tr ng-repeat="fa in favorites">
+                  <td><div class="col-md-11">{{fa.name}}</div>
+                    <button ng-click="eliminar(fa.$id)"  type="button" class="btn btn-danger" >
+                      <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                    </button>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+</div>
+
+<hr/>
+
+<div class="col-md-10">
+
+<button class="col-md-3 btn btn-danger" ng-click="volver()">Volver</button>
+
+</div>

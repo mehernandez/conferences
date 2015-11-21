@@ -1,0 +1,48 @@
+<div>
+    <div class="col-md-6">
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <th>Próximas conferencias</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="bodycontainer scrollable">
+            <table class="table table-hover table-striped table-condensed table-scrollable"
+            style="overflow-y: auto;">
+                <tbody style="max-height: 450px;">
+                <tr ng-repeat="conference in conferences | orderBy:'+event'">
+                    <td ng-click="showConference(conference)">{{conference.name}}</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-6">
+
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label  class="col-sm-2 control-label">Usuario</label>
+            <div class="col-sm-10">
+              <input ng-model="usr" class="form-control"  placeholder="Usuario" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label" >Contraseña</label>
+            <div class="col-sm-10">
+              <input ng-model="pass" type="password" class="form-control"  placeholder="Contraseña">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button  class="btn btn-primary" ng-click="login()">Login</button>
+            </div>
+          </div>
+        </form>
+
+    </div>
+</div>
